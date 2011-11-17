@@ -4,10 +4,12 @@
 ## Methods
 
 Requires application client_id and client_secret
+
   * basicAccountInfo
   * nearby(lat, long)
 
 Requires OAuth2 Token
+
   * fullAccountInfo
   * balance
   * contacts
