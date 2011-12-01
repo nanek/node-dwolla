@@ -2,7 +2,7 @@
   "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
   "name": "dwolla",
   "description": "Dwolla API for node.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:nanek/node-dwolla.git"

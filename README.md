@@ -33,7 +33,7 @@ client_secret to make API requests. Set these as env variables.
 
     // get oauth_token, be sure to set the proper scope
     // use oauth lib or everyauth to setup OAuth2
-    // see nanek/everyauth for example Dwolla authentication
+    // see everyauth for example Dwolla authentication
     var token = req.session.oauth_token;
 
     dwolla.fullAccountInfo(token, function(err, data) {
