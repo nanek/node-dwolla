@@ -8,9 +8,9 @@ Requires your Dwolla application client_id and client_secret.
   * basicAccountInfo(client_id, client_secret, id, callback)
   * nearby(client_id, client_secret, lat, lon, [, params], callback)
 
-Requires a valid user OAuth2 token. Note token do not expire and may be
+Requires a valid user OAuth2 token. Note tokens do not expire and may be
 reused. See https://github.com/bnoguchi/everyauth for an example on how
-to get authorize and get a Dwolla OAuth2 token.
+to authorize a user and get a Dwolla OAuth2 token.
 
   * fullAccountInfo(oauth_token, callback)
   * balance(oauth_token, callback)
