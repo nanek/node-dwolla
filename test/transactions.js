@@ -22,10 +22,4 @@ describe('Transactions', function() {
       });
     });
   });
-  describe('Send', function() {
-    it('should return a transaction number');
-  });
-  describe('Request', function() {
-    it('should return a transaction number');
-  });
 });
