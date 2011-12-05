@@ -1,6 +1,6 @@
 var dwolla = require('../lib/dwolla');
 var should = require('should');
-var c = require('./config');
+var c = require('../config');
 
 describe('Contacts', function() {
   describe('User Contacts', function() {

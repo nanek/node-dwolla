@@ -1,12 +1,9 @@
 var dwolla = require('../lib/dwolla');
 var c = require('../config');
 
-if (c.pin === null) return 'Missing DWOLLA_PIN';
-if (c.token === null) return 'Missing DWOLLA_TOKEN';
-
-var sourceId = 'shiff2kl@yahoo.com';
+var sourceId = ''; // Add valid sourceId
 var amount = 1;
-var params = { sourceType: 'Email' };
+var params = { sourceType: 'Email' }; // Set sourceType to match sourceId type
 dwolla.request(c.token, c.pin, sourceId, amount, params, function(err, tran) {
   console.log(err);
   console.log(tran);
