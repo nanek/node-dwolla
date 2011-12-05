@@ -13,7 +13,7 @@ newUser.city = '';
 newUser.state = '';
 newUser.zip = '';
 newUser.phone = '';
-newUser.dob = '';
+newUser.dateOfBirth = '';
 newUser.acceptTerms = 'true';
 
 dwolla.register(c.client_id, c.client_secret, newUser, function(err, user) {
