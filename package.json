@@ -2,19 +2,19 @@
   "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
   "name": "dwolla",
   "description": "Dwolla API for node.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "git@github.com:nanek/node-dwolla.git"
   },
   "main": "lib/dwolla.js",
   "engines": {
-    "node": ">=0.4.7 <0.7.0"
+    "node": ">=0.4.7 <0.9.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "should": ">=0.3.2",
-    "mocha": ">=0.2.0"
+    "should": ">=0.6.3",
+    "mocha": ">=1.2.2"
   },
   "scripts": {
     "test": "mocha"
