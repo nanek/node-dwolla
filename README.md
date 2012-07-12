@@ -10,8 +10,7 @@ Requires your Dwolla application client_id and client_secret.
   * register(client_id, client_secret, userInfo, callback)
 
 Requires a valid user OAuth2 token. Note tokens do not expire and may be
-reused. See https://github.com/bnoguchi/everyauth for an example on how
-to authorize a user and get a Dwolla OAuth2 token.
+reused.
 
   * fullAccountInfo(oauth_token, callback)
   * balance(oauth_token, callback)
@@ -23,6 +22,18 @@ to authorize a user and get a Dwolla OAuth2 token.
   * request(oauth_token, pin, sourceId, amount[, params], callback)
 
 All optional parameters are passed in as an optional object before the callback.
+
+### How to obtain a Dwolla OAuth2 token
+
+To authenticate a user, follow the examples from one of the following modules.
+
+#### everyauth
+
+[everyauth](http://everyauth.com/) is an authentication and authorization module for your node.js Connect and Express apps. See http://everyauth.com/#other-modules/dwolla-oauth2
+
+#### passport-dwolla
+
+[Passport](http://passportjs.org/) is authentication middleware for Node.js, popular for being lightweight, modular, and flexible. A strategy for authenticating with Dwolla, along with an example, is available in the [passport-dwolla](https://github.com/jaredhanson/passport-dwolla) module.
 
 ## Installation
 
