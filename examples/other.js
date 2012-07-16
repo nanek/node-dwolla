@@ -18,3 +18,8 @@ dwolla.transactions(c.token, function(err, data) {
   if (err) { console.log(err); }
   console.log(data);
 });
+
+dwolla.fundingSources(c.token, function(err, data) {
+  if (err) { console.log(err); }
+  console.log(data);
+});

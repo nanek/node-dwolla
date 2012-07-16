@@ -20,6 +20,8 @@ reused.
   * transactionsStats(oauth_token[, params], callback)
   * send(oauth_token, pin, destinationId, amount[, params], callback)
   * request(oauth_token, pin, sourceId, amount[, params], callback)
+  * fundingSources(oauth_token, callback)
+  * fundingSourceById(oauth_token, id, callback)
 
 All optional parameters are passed in as an optional object before the callback.
 
@@ -34,6 +36,11 @@ To authenticate a user, follow the examples from one of the following modules.
 #### passport-dwolla
 
 [Passport](http://passportjs.org/) is authentication middleware for Node.js, popular for being lightweight, modular, and flexible. A strategy for authenticating with Dwolla, along with an example, is available in the [passport-dwolla](https://github.com/jaredhanson/passport-dwolla) module.
+
+#### Dwolla Developer Site
+
+The Dwolla [Generate Token](http://developers.dwolla.com/dev/token) tool allows you
+create a valid OAuth token for testing purposes.
 
 ## Installation
 
