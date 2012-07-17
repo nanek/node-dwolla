@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>node-dwolla by nanek</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>node-dwolla</h1>
+        <p>Dwolla API client for node.js</p>
+
+        <p class="view"><a href="https://github.com/nanek/node-dwolla">View the Project on GitHub <small>nanek/node-dwolla</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nanek/node-dwolla/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nanek/node-dwolla/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nanek/node-dwolla">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Dwolla API for node.js</h1>
+
+<p><a href="https://www.dwolla.com/developers">Dwolla Developers</a></p>
+
+<h2>Methods</h2>
+
+<p>Requires your Dwolla application client_id and client_secret.</p>
+
+<ul>
+<li>basicAccountInfo(client_id, client_secret, id, callback)</li>
+<li>nearby(client_id, client_secret, lat, lon, [, params], callback)</li>
+<li>register(client_id, client_secret, userInfo, callback)</li>
+</ul><p>Requires a valid user OAuth2 token. Note tokens do not expire and may be
+reused.</p>
+
+<ul>
+<li>fullAccountInfo(oauth_token, callback)</li>
+<li>balance(oauth_token, callback)</li>
+<li>contacts(oauth_token[, params], callback)</li>
+<li>transactions(oauth_token[, params], callback)</li>
+<li>transactionById(oauth_token, id, callback)</li>
+<li>transactionsStats(oauth_token[, params], callback)</li>
+<li>send(oauth_token, pin, destinationId, amount[, params], callback)</li>
+<li>request(oauth_token, pin, sourceId, amount[, params], callback)</li>
+<li>fundingSources(oauth_token, callback)</li>
+<li>fundingSourceById(oauth_token, id, callback)</li>
+</ul><p>All optional parameters are passed in as an optional object before the callback.</p>
+
+<h3>How to obtain a Dwolla OAuth2 token</h3>
+
+<p>To authenticate a user, follow the examples from one of the following modules.</p>
+
+<h4>everyauth</h4>
+
+<p><a href="http://everyauth.com/">everyauth</a> is an authentication and authorization module for your node.js Connect and Express apps. See <a href="http://everyauth.com/#other-modules/dwolla-oauth2">http://everyauth.com/#other-modules/dwolla-oauth2</a></p>
+
+<h4>passport-dwolla</h4>
+
+<p><a href="http://passportjs.org/">Passport</a> is authentication middleware for Node.js, popular for being lightweight, modular, and flexible. A strategy for authenticating with Dwolla, along with an example, is available in the <a href="https://github.com/jaredhanson/passport-dwolla">passport-dwolla</a> module.</p>
+
+<h4>Dwolla Developer Site</h4>
+
+<p>The Dwolla <a href="http://developers.dwolla.com/dev/token">Generate Token</a> tool allows you
+create a valid OAuth token for testing purposes.</p>
+
+<h2>Installation</h2>
+
+<pre><code>$ npm install dwolla
+</code></pre>
+
+<h2>Example Usage</h2>
+
+<p>See more examples in the examples folder.</p>
+
+<pre><code>var dwolla = require('dwolla');
+
+// get oauth_token, be sure to set the proper scope
+// use oauth lib or everyauth to setup OAuth2
+// see everyauth for example Dwolla authentication
+var token = req.session.oauth_token;
+
+dwolla.fullAccountInfo(token, function(err, data) {
+  console.log("Full Account Info: " + data);
+});
+
+dwolla.transactions(token, function(err, data) {
+  console.log("Transactions: " + data);
+});
+
+var params = {};
+params.search = 'Ben';
+params.types = 'All';
+dwolla.contacts(token, params, function(err, data) {
+  console.log("Contacts: " + data);
+});
+</code></pre>
+
+<h2>Tests</h2>
+
+<p>Tests use mocha and should.js. Tests were made only for GET requests,
+as tests of POST requests would be processed just like real requests.
+Although working examples of each POST request can be found in the
+examples folder.</p>
+
+<pre><code>$ npm test
+</code></pre>
+
+<p>or</p>
+
+<pre><code>$ mocha
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nanek">nanek</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
