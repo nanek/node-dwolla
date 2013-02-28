@@ -17,6 +17,6 @@
     "mocha": ">=1.2.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -t 6000"
   }
 }
