@@ -5,23 +5,23 @@
 
 Requires your Dwolla application client_id and client_secret.
 
-  * basicAccountInfo(client_id, client_secret, id, callback)
-  * nearby(client_id, client_secret, lat, lon, [, params], callback)
-  * register(client_id, client_secret, userInfo, callback)
+  * basicAccountInfo(client_id, client_secret, id, fn)
+  * nearby(client_id, client_secret, lat, lon, [, params], fn)
+  * register(client_id, client_secret, userInfo, fn)
 
 Requires a valid user OAuth2 token. Note tokens do not expire and may be
 reused.
 
-  * fullAccountInfo(oauth_token, callback)
-  * balance(oauth_token, callback)
-  * contacts(oauth_token[, params], callback)
-  * transactions(oauth_token[, params], callback)
-  * transactionById(oauth_token, id, callback)
-  * transactionsStats(oauth_token[, params], callback)
-  * send(oauth_token, pin, destinationId, amount[, params], callback)
-  * request(oauth_token, pin, sourceId, amount[, params], callback)
-  * fundingSources(oauth_token, callback)
-  * fundingSourceById(oauth_token, id, callback)
+  * fullAccountInfo(oauth_token, fn)
+  * balance(oauth_token, fn)
+  * contacts(oauth_token[, params], fn)
+  * transactions(oauth_token[, params], fn)
+  * transactionById(oauth_token, id, fn)
+  * transactionsStats(oauth_token[, params], fn)
+  * send(oauth_token, pin, destinationId, amount[, params], fn)
+  * request(oauth_token, pin, sourceId, amount[, params], fn)
+  * fundingSources(oauth_token, fn)
+  * fundingSourceById(oauth_token, id, fn)
   * deposit(oauth_token, pin, sourceId, amount, fn)
   * fulfill(oauth_token, pin, sourceId[, params], fn)
   * pending(oauth_token, callback)
