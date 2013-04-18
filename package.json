@@ -2,7 +2,17 @@
   "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
   "name": "dwolla",
   "description": "Dwolla API for node.js",
-  "version": "0.1.0",
+  "keywords": ["dwolla", "payment"],
+  "contributors": [
+    {
+      "name": "Dan Milon",
+      "email": "danmilon@gmail.com"
+    },
+    {
+      "name": "Rob Putnam"
+    }
+  ],
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:nanek/node-dwolla.git"
