@@ -22,6 +22,10 @@ reused.
   * request(oauth_token, pin, sourceId, amount[, params], callback)
   * fundingSources(oauth_token, callback)
   * fundingSourceById(oauth_token, id, callback)
+  * deposit(oauth_token, pin, sourceId, amount, fn)
+  * fulfill(oauth_token, pin, sourceId[, params], fn)
+  * pending(oauth_token, callback)
+  * withdraw(oauth_token, pin, sourceId, amount, fn)
 
 All optional parameters are passed in as an optional object before the callback.
 
