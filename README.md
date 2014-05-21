@@ -27,7 +27,17 @@ reused.
   * pending(oauth_token, callback)
   * withdraw(oauth_token, pin, sourceId, amount, fn)
 
-All optional parameters are passed in as an optional object before the callback.
+  All optional parameters are passed in as an optional object before the callback.
+
+## Sandbox Support
+
+If you desire to test your application with Dwolla's UAT sandbox, you can 
+dynamically toggle between UAT and non-UAT modes:
+
+  * toggleUAT() will switch between sandbox and non-sandbox mode
+  * isUAT() returns a bool which indicates whether or not sandbox mode is enabled
+
+The sandbox environment is disabled by default. 
 
 ### How to obtain a Dwolla OAuth2 token
 
