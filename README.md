@@ -32,10 +32,10 @@ reused.
 ## Sandbox Support
 
 If you desire to test your application with Dwolla's UAT sandbox, you can 
-dynamically toggle between UAT and non-UAT modes:
+dynamically toggle between sandbox and production mode by toggling the sandbox flag.
 
-  * toggleUAT() will switch between sandbox and non-sandbox mode
-  * isUAT() returns a bool which indicates whether or not sandbox mode is enabled
+    dwolla = require('dwolla');
+    dwolla.sandbox = true;
 
 The sandbox environment is disabled by default. 
 
@@ -64,6 +64,9 @@ create a valid OAuth token for testing purposes.
 See more examples in the examples folder.
 
     var dwolla = require('dwolla');
+
+    // use the Dwolla Sandbox environment instead of prod
+    dwolla.sandbox = true;
 
     // get oauth_token, be sure to set the proper scope
     // use oauth lib or everyauth to setup OAuth2
