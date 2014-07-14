@@ -22,6 +22,8 @@ reused.
   * request(oauth_token, pin, sourceId, amount[, params], fn)
   * fundingSources(oauth_token, fn)
   * fundingSourceById(oauth_token, id, fn)
+  * [NEW!] addFundingSource(oauth_token, account_number, routing_number, account_type, name, fn)
+  * [NEW!] verifyFundingSource(oauth_token, deposit1, deposit2, id, fn)
   * deposit(oauth_token, pin, sourceId, amount, fn)
   * fulfill(oauth_token, pin, sourceId[, params], fn)
   * pending(oauth_token, callback)
