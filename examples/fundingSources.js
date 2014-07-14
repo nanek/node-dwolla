@@ -8,7 +8,7 @@ dwolla.fundingSources(c.token, function(err, data) {
   console.log(data);
 });
 
-// Example 2: Get information for funding source with ID '999999' for 
+// Example 2: Get information for funding source with ID '999999' for
 // 			  current user's OAuth token
 
 dwolla.fundingSourceById(c.token, '999999', function(err, data) {
@@ -24,7 +24,7 @@ dwolla.addFundingSource(c.token, '99999999', '99999999', 'Checking', 'My bank', 
   console.log(data);
 });
 
-// Example 4: Verify a funding source added with ID '999999' and 
+// Example 4: Verify a funding source added with ID '999999' and
 //			  mini-deposit amounts of $0.02 and $0.07.
 dwolla.verifyFundingSource(c.token, 0.02, 0.07, '999999', function(err, data) {
   if (err) { console.log(err); }

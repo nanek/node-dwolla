@@ -9,11 +9,11 @@ items.push(transaction1);
 
 var fS = "Balance";
 
-// Optional parameters can be passed in place of null
+// NOTE: Optional parameters can also be passed in.
 // View MassPay documentation here: https://developers.dwolla.com/dev/docs/masspay
 
 // Create MassPay job (masspay/create)
-dwolla.createMassPayJob(c.token, fS, c.pin, items, null, function(err, data) {
+dwolla.createMassPayJob(c.token, fS, c.pin, items, function(err, data) {
   if (err) { console.log(err); }
   console.log(data);
 });
@@ -27,7 +27,7 @@ dwolla.getMassPayJob(c.token, jobId, function(err, data) {
 });
 
 // Get all transactions from MassPay Job (masspay/jobs/items)
-dwolla.getMassPayJobItems(c.token, jobId, null, function(err, data) {
+dwolla.getMassPayJobItems(c.token, jobId, function(err, data) {
 	if (err) { console.log(err); }
 	console.log(data);
 });
