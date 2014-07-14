@@ -29,17 +29,22 @@ reused.
   * pending(oauth_token, callback)
   * withdraw(oauth_token, pin, sourceId, amount, fn)
 
+[MassPay](https://developers.dwolla.com/dev/docs/masspay)
+  * createMassPayJob(oauth_token, fundsSource, pin, items[, params], fn)
+  * getMassPayJob(oauth_token, job_id, fn)
+  * getMassPayJobItems(oauth_token, job_id[, params], fn)
+
   All optional parameters are passed in as an optional object before the callback.
 
 ## Sandbox Support
 
-If you desire to test your application with Dwolla's UAT sandbox, you can 
+If you desire to test your application with Dwolla's UAT sandbox, you can
 dynamically toggle between sandbox and production mode by toggling the sandbox flag.
 
     dwolla = require('dwolla');
     dwolla.sandbox = true;
 
-The sandbox environment is disabled by default. 
+The sandbox environment is disabled by default.
 
 ### How to obtain a Dwolla OAuth2 token
 
