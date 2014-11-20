@@ -1,6 +1,9 @@
 # Dwolla API for node.js
 [Dwolla Developers](https://www.dwolla.com/developers)
 
+NOTE: Dwolla has released an Official NodeJS Wrapper for Dwolla's API [dwolla-node](https://github.com/Dwolla/dwolla-node)
+It is a fork of this library with significant refactoring.
+
 ## Methods
 
 Requires your Dwolla application client_id and client_secret.
@@ -9,8 +12,11 @@ Requires your Dwolla application client_id and client_secret.
   * nearby(client_id, client_secret, lat, lon, [, params], fn)
   * register(client_id, client_secret, userInfo, fn)
 
-Requires a valid user OAuth2 token. Note tokens do not expire and may be
-reused.
+Requires a valid user OAuth2 token. Currently tokens do not expire and may be
+reused, however this will change March 2015.
+
+NOTE: Dwolla has implemented a new OAuth implementation.
+(https://discuss.dwolla.com/t/dwolla-s-new-more-secure-implementation-of-oauth/546)
 
   * fullAccountInfo(oauth_token, fn)
   * balance(oauth_token, fn)
@@ -22,8 +28,8 @@ reused.
   * request(oauth_token, pin, sourceId, amount[, params], fn)
   * fundingSources(oauth_token, fn)
   * fundingSourceById(oauth_token, id, fn)
-  * [NEW!] addFundingSource(oauth_token, account_number, routing_number, account_type, name, fn)
-  * [NEW!] verifyFundingSource(oauth_token, deposit1, deposit2, id, fn)
+  * addFundingSource(oauth_token, account_number, routing_number, account_type, name, fn)
+  * verifyFundingSource(oauth_token, deposit1, deposit2, id, fn)
   * deposit(oauth_token, pin, sourceId, amount, fn)
   * fulfill(oauth_token, pin, sourceId[, params], fn)
   * pending(oauth_token, callback)
